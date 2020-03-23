@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Loan = sequelize.init('Loan', {
+  const Loan = sequelize.define('Loan', {
     MemberId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -49,4 +49,5 @@ module.exports = (sequelize, DataTypes) => {
     Loan.belongsTo(models.Member)
     Loan.belongsTo(models.Book)
   };
+  return Loan;
 };
