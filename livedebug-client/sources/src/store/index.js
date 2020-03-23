@@ -30,11 +30,11 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    fetchGlobals ({ commit }) {
+    fetchGlobals ({ context }) {
       this.state.allLoading = true
       covid.get('/all')
         .then(({ data }) => {
-          commit('FETCH_GLOBALS', data)
+          context.commit('FETCH_GLOBALS', data)
         })
         .catch(err => {
           console.log(err)
@@ -43,11 +43,11 @@ export default new Vuex.Store({
           this.state.allLoading = false
         })
     },
-    fetchCountries ({ commit }) {
+    fetchCountries ({ context }) {
       this.state.countriesLoading = true
       covid.get('/countries')
         .then(({ data }) => {
-          commit('FETCH_COUNTRIES', data)
+          context.commit('FETCH_COUNTRIES', data)
         })
         .catch(err => {
           console.log(err)
