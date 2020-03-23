@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-
+Vue.use(Vuex)
 
 
 const covid = axios.create({
@@ -26,7 +26,7 @@ export default new Vuex.Store({
       state.globals = payload
     },
     FETCH_COUNTRIES (state, payload) {
-      state.countries = state
+      state.countries = payload
     }
   },
   actions: {

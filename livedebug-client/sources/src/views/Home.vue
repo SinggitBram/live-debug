@@ -12,11 +12,11 @@
   </div>
 </template>
 
-<style>
-import Header from '../components/Home/Header'
-import Cases from '../components/Home/Cases'
-import Tips from '../components/Home/Tips'
-
+<script>
+  import Header from '../components/Home/Header'
+  import Cases from '../components/Home/Cases'
+  import Tips from '../components/Home/Tips'
+  
 export default {
   name: 'Home',
   components: {
@@ -24,5 +24,11 @@ export default {
     Cases,
     Tips
   }
+  
 }
+</script>
+
+<style>
+
+
 </style>
